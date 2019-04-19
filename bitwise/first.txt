@@ -1,0 +1,67 @@
+CHAR_BIT on your system: 8
+ 11111111 11111111 11111111 11111111
+ 11111111 11111111 11111111 11111111
+ 00000000 00000000 00000000 00000000
+ 00000000 00000000 00000000 00000000
+
+Start with 1, shift it left.
+Decimal value of x is
+2
+Binary value of x is
+ 00000000 00000000 00000000 00000010
+
+Shift it left again.
+Decimal value of x is
+4
+Binary value of x is
+ 00000000 00000000 00000000 00000100
+
+OR our value with another number, 0x00000001.
+Decimal value of x is
+5
+Binary value of x is
+ 00000000 00000000 00000000 00000101
+
+AND our value with another number, 0x00000004.
+Decimal value of x is
+4
+Binary value of x is
+ 00000000 00000000 00000000 00000100
+
+Shift right.
+Decimal value of x is
+2
+Binary value of x is
+ 00000000 00000000 00000000 00000010
+
+Shift right again.
+Decimal value of x is
+1
+Binary value of x is
+ 00000000 00000000 00000000 00000001
+
+
+------------ now with more bits set! --------------
+
+Decimal value of x is
+305419896
+Hex value of x is 
+0x12345678
+Binary value of x is
+ 00010010 00110100 01010110 01111000
+
+The low-order six bits:
+ 111000
+
+Masking to keep the high-order six bits (on a 32-bit system):
+ 00010000 00000000 00000000 00000000
+
+Those six bits as a six-bit field:
+ 000100
+
+The 20 bits in between:
+ 00000010 00110100 01010110 01000000
+
+Shifted down as a field:
+ 10001101 00010101 1001
+

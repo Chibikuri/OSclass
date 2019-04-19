@@ -2,7 +2,7 @@
 #include<string.h>
 
 int main(void){
-    char *s = "5555555555555555444444";
+    char *s = "555555555555555444444";
     int i, d, w = 1, t = 0;
 
     for(i = strlen(s)-1; i >= 0;i--){
@@ -13,7 +13,7 @@ int main(void){
     }
     if (t%10 == 0){ 
         printf("ok\n"); 
-    }else {
+    } else {
         printf("no\n");
     };
     return 0;

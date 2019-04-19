@@ -1,0 +1,11 @@
+Minimum value of short int = -32768
+Maximum value of short int = 32767
+Maximum value of short int = 65535
+
+Maximum value of int = -2147483648
+Minimum value of int = 2147483647
+Maximum value of int = 4294967295
+
+Maximum value of long int = -9223372036854775808
+Maximum value of long int = 9223372036854775807
+Maximum value of long int = 18446744073709551615
