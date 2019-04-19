@@ -5,14 +5,15 @@
 
 // Print an int as a binary number
 // Second arg is how many bits to print; 0 means size of int.
-void binaryprintf (long unsigned int number, int len) {
-    long shiftlen = (sizeof(int) * CHAR_BIT) - 1;
-    unsigned int mask;
+void binaryprintf (unsigned long long number, int len) {
+    int shiftlen = (sizeof(long) * CHAR_BIT) - 1;
+    unsigned long long mask;
 
     if (len)
         shiftlen = len - 1;
     // else start at far left end (maximum number of bits) in int
-    mask = 1 << shiftlen;
+    mask = 1ull << shiftlen;
+    printf("MASK%ull\n", mask);
     // Iterate until mask is 0
     int count = 0;
     while(mask) {
@@ -21,9 +22,10 @@ void binaryprintf (long unsigned int number, int len) {
             printf(" ");
         }
         // Print 1 or 0 based on value of number and mask
-        printf("%d", (number &mask ? 1 : 0));
+        printf("%ld\n", (number & mask ? 1 : 0));
         // Shift mask to the right
         mask >>= 1;
+        printf("%ull\n", mask);
         count++;
     }
     // Print newline at the end
@@ -36,7 +38,7 @@ int main(int argc, char **argv) {
     printf("CHAR_BIT on your system: %d\n", CHAR_BIT);
 
     binaryprintf(0xFFFFFFFFFFFFFFFF, 0); // maximum = 2^64 = 11111111111111111111111111111111
-    // binaryprintf(18446744073709551615, 0); // maximum = 2^64 = 11111111111111111111111111111111
+    binaryprintf(1844674407370955161, 0); // maximum = 2^64 = 11111111111111111111111111111111
     binaryprintf(0x0000000000000000, 0); // minimum = 0    = 00000000000000000000000000000000
     binaryprintf(0, 0);          //           0    = 00000000000000000000000000000000
     printf("\n");

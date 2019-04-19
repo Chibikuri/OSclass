@@ -2,6 +2,7 @@
 #include<limits.h>
 
 int main(void){
+    printf("CHAR_BIT%d\n", CHAR_BIT);
     printf("Minimum value of short int = %d\n", SHRT_MIN);
     printf("Maximum value of short int = %d\n", SHRT_MAX);
     printf("Maximum value of short int = %d\n\n", USHRT_MAX);
