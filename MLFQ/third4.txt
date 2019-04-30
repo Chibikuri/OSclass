@@ -1,0 +1,1072 @@
+Here is the list of inputs:
+OPTIONS jobs 2
+OPTIONS queues 3
+OPTIONS allotments for queue  2 is   1
+OPTIONS quantum length for queue  2 is  10
+OPTIONS allotments for queue  1 is   1
+OPTIONS quantum length for queue  1 is  10
+OPTIONS allotments for queue  0 is   1
+OPTIONS quantum length for queue  0 is  10
+OPTIONS boost 0
+OPTIONS ioTime 5
+OPTIONS stayAfterIO False
+OPTIONS iobump False
+
+
+For each job, three defining characteristics are given:
+  startTime : at what time does the job enter the system
+  runTime   : the total CPU time needed by the job to finish
+  ioFreq    : every ioFreq time units, the job issues an I/O
+              (the I/O takes ioTime units to complete)
+
+Job List:
+  Job  0: startTime   0 - runTime 100 - ioFreq   0
+  Job  1: startTime   0 - runTime 200 - ioFreq   2
+
+
+Execution Trace:
+
+[ time 0 ] JOB BEGINS by JOB 0
+[ time 0 ] JOB BEGINS by JOB 1
+[ time 0 ] Run JOB 0 at PRIORITY 2 [ TICKS 9 ALLOT 1 TIME 99 (of 100) ]
+[ time 1 ] Run JOB 0 at PRIORITY 2 [ TICKS 8 ALLOT 1 TIME 98 (of 100) ]
+[ time 2 ] Run JOB 0 at PRIORITY 2 [ TICKS 7 ALLOT 1 TIME 97 (of 100) ]
+[ time 3 ] Run JOB 0 at PRIORITY 2 [ TICKS 6 ALLOT 1 TIME 96 (of 100) ]
+[ time 4 ] Run JOB 0 at PRIORITY 2 [ TICKS 5 ALLOT 1 TIME 95 (of 100) ]
+[ time 5 ] Run JOB 0 at PRIORITY 2 [ TICKS 4 ALLOT 1 TIME 94 (of 100) ]
+[ time 6 ] Run JOB 0 at PRIORITY 2 [ TICKS 3 ALLOT 1 TIME 93 (of 100) ]
+[ time 7 ] Run JOB 0 at PRIORITY 2 [ TICKS 2 ALLOT 1 TIME 92 (of 100) ]
+[ time 8 ] Run JOB 0 at PRIORITY 2 [ TICKS 1 ALLOT 1 TIME 91 (of 100) ]
+[ time 9 ] Run JOB 0 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 90 (of 100) ]
+[ time 10 ] Run JOB 1 at PRIORITY 2 [ TICKS 9 ALLOT 1 TIME 199 (of 200) ]
+[ time 11 ] Run JOB 1 at PRIORITY 2 [ TICKS 8 ALLOT 1 TIME 198 (of 200) ]
+[ time 12 ] IO_START by JOB 1
+IO DONE
+[ time 12 ] Run JOB 0 at PRIORITY 1 [ TICKS 9 ALLOT 1 TIME 89 (of 100) ]
+[ time 13 ] Run JOB 0 at PRIORITY 1 [ TICKS 8 ALLOT 1 TIME 88 (of 100) ]
+[ time 14 ] Run JOB 0 at PRIORITY 1 [ TICKS 7 ALLOT 1 TIME 87 (of 100) ]
+[ time 15 ] Run JOB 0 at PRIORITY 1 [ TICKS 6 ALLOT 1 TIME 86 (of 100) ]
+[ time 16 ] Run JOB 0 at PRIORITY 1 [ TICKS 5 ALLOT 1 TIME 85 (of 100) ]
+[ time 17 ] IO_DONE by JOB 1
+[ time 17 ] Run JOB 1 at PRIORITY 2 [ TICKS 7 ALLOT 1 TIME 197 (of 200) ]
+[ time 18 ] Run JOB 1 at PRIORITY 2 [ TICKS 6 ALLOT 1 TIME 196 (of 200) ]
+[ time 19 ] IO_START by JOB 1
+IO DONE
+[ time 19 ] Run JOB 0 at PRIORITY 1 [ TICKS 4 ALLOT 1 TIME 84 (of 100) ]
+[ time 20 ] Run JOB 0 at PRIORITY 1 [ TICKS 3 ALLOT 1 TIME 83 (of 100) ]
+[ time 21 ] Run JOB 0 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 82 (of 100) ]
+[ time 22 ] Run JOB 0 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 81 (of 100) ]
+[ time 23 ] Run JOB 0 at PRIORITY 1 [ TICKS 0 ALLOT 1 TIME 80 (of 100) ]
+[ time 24 ] IO_DONE by JOB 1
+[ time 24 ] Run JOB 1 at PRIORITY 2 [ TICKS 5 ALLOT 1 TIME 195 (of 200) ]
+[ time 25 ] Run JOB 1 at PRIORITY 2 [ TICKS 4 ALLOT 1 TIME 194 (of 200) ]
+[ time 26 ] IO_START by JOB 1
+IO DONE
+[ time 26 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 79 (of 100) ]
+[ time 27 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 78 (of 100) ]
+[ time 28 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 77 (of 100) ]
+[ time 29 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 76 (of 100) ]
+[ time 30 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 75 (of 100) ]
+[ time 31 ] IO_DONE by JOB 1
+[ time 31 ] Run JOB 1 at PRIORITY 2 [ TICKS 3 ALLOT 1 TIME 193 (of 200) ]
+[ time 32 ] Run JOB 1 at PRIORITY 2 [ TICKS 2 ALLOT 1 TIME 192 (of 200) ]
+[ time 33 ] IO_START by JOB 1
+IO DONE
+[ time 33 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 74 (of 100) ]
+[ time 34 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 73 (of 100) ]
+[ time 35 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 72 (of 100) ]
+[ time 36 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 71 (of 100) ]
+[ time 37 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 70 (of 100) ]
+[ time 38 ] IO_DONE by JOB 1
+[ time 38 ] Run JOB 1 at PRIORITY 2 [ TICKS 1 ALLOT 1 TIME 191 (of 200) ]
+[ time 39 ] Run JOB 1 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 190 (of 200) ]
+[ time 40 ] IO_START by JOB 1
+IO DONE
+[ time 40 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 69 (of 100) ]
+[ time 41 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 68 (of 100) ]
+[ time 42 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 67 (of 100) ]
+[ time 43 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 66 (of 100) ]
+[ time 44 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 65 (of 100) ]
+[ time 45 ] IO_DONE by JOB 1
+[ time 45 ] Run JOB 1 at PRIORITY 1 [ TICKS 9 ALLOT 1 TIME 189 (of 200) ]
+[ time 46 ] Run JOB 1 at PRIORITY 1 [ TICKS 8 ALLOT 1 TIME 188 (of 200) ]
+[ time 47 ] IO_START by JOB 1
+IO DONE
+[ time 47 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 64 (of 100) ]
+[ time 48 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 63 (of 100) ]
+[ time 49 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 62 (of 100) ]
+[ time 50 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 61 (of 100) ]
+[ time 51 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 60 (of 100) ]
+[ time 52 ] IO_DONE by JOB 1
+[ time 52 ] Run JOB 1 at PRIORITY 1 [ TICKS 7 ALLOT 1 TIME 187 (of 200) ]
+[ time 53 ] Run JOB 1 at PRIORITY 1 [ TICKS 6 ALLOT 1 TIME 186 (of 200) ]
+[ time 54 ] IO_START by JOB 1
+IO DONE
+[ time 54 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 59 (of 100) ]
+[ time 55 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 58 (of 100) ]
+[ time 56 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 57 (of 100) ]
+[ time 57 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 56 (of 100) ]
+[ time 58 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 55 (of 100) ]
+[ time 59 ] IO_DONE by JOB 1
+[ time 59 ] Run JOB 1 at PRIORITY 1 [ TICKS 5 ALLOT 1 TIME 185 (of 200) ]
+[ time 60 ] Run JOB 1 at PRIORITY 1 [ TICKS 4 ALLOT 1 TIME 184 (of 200) ]
+[ time 61 ] IO_START by JOB 1
+IO DONE
+[ time 61 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 54 (of 100) ]
+[ time 62 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 53 (of 100) ]
+[ time 63 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 52 (of 100) ]
+[ time 64 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 51 (of 100) ]
+[ time 65 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 50 (of 100) ]
+[ time 66 ] IO_DONE by JOB 1
+[ time 66 ] Run JOB 1 at PRIORITY 1 [ TICKS 3 ALLOT 1 TIME 183 (of 200) ]
+[ time 67 ] Run JOB 1 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 182 (of 200) ]
+[ time 68 ] IO_START by JOB 1
+IO DONE
+[ time 68 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 49 (of 100) ]
+[ time 69 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 48 (of 100) ]
+[ time 70 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 47 (of 100) ]
+[ time 71 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 46 (of 100) ]
+[ time 72 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 45 (of 100) ]
+[ time 73 ] IO_DONE by JOB 1
+[ time 73 ] Run JOB 1 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 181 (of 200) ]
+[ time 74 ] Run JOB 1 at PRIORITY 1 [ TICKS 0 ALLOT 1 TIME 180 (of 200) ]
+[ time 75 ] IO_START by JOB 1
+IO DONE
+[ time 75 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 44 (of 100) ]
+[ time 76 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 43 (of 100) ]
+[ time 77 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 42 (of 100) ]
+[ time 78 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 41 (of 100) ]
+[ time 79 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 40 (of 100) ]
+[ time 80 ] IO_DONE by JOB 1
+[ time 80 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 39 (of 100) ]
+[ time 81 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 38 (of 100) ]
+[ time 82 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 37 (of 100) ]
+[ time 83 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 36 (of 100) ]
+[ time 84 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 35 (of 100) ]
+[ time 85 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 34 (of 100) ]
+[ time 86 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 33 (of 100) ]
+[ time 87 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 32 (of 100) ]
+[ time 88 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 31 (of 100) ]
+[ time 89 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 30 (of 100) ]
+[ time 90 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 179 (of 200) ]
+[ time 91 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 178 (of 200) ]
+[ time 92 ] IO_START by JOB 1
+IO DONE
+[ time 92 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 29 (of 100) ]
+[ time 93 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 28 (of 100) ]
+[ time 94 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 27 (of 100) ]
+[ time 95 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 26 (of 100) ]
+[ time 96 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 25 (of 100) ]
+[ time 97 ] IO_DONE by JOB 1
+[ time 97 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 24 (of 100) ]
+[ time 98 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 23 (of 100) ]
+[ time 99 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 22 (of 100) ]
+[ time 100 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 21 (of 100) ]
+[ time 101 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 20 (of 100) ]
+[ time 102 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 177 (of 200) ]
+[ time 103 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 176 (of 200) ]
+[ time 104 ] IO_START by JOB 1
+IO DONE
+[ time 104 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 19 (of 100) ]
+[ time 105 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 18 (of 100) ]
+[ time 106 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 17 (of 100) ]
+[ time 107 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 16 (of 100) ]
+[ time 108 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 15 (of 100) ]
+[ time 109 ] IO_DONE by JOB 1
+[ time 109 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 14 (of 100) ]
+[ time 110 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 13 (of 100) ]
+[ time 111 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 12 (of 100) ]
+[ time 112 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 11 (of 100) ]
+[ time 113 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 10 (of 100) ]
+[ time 114 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 175 (of 200) ]
+[ time 115 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 174 (of 200) ]
+[ time 116 ] IO_START by JOB 1
+IO DONE
+[ time 116 ] Run JOB 0 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 9 (of 100) ]
+[ time 117 ] Run JOB 0 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 8 (of 100) ]
+[ time 118 ] Run JOB 0 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 7 (of 100) ]
+[ time 119 ] Run JOB 0 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 6 (of 100) ]
+[ time 120 ] Run JOB 0 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 5 (of 100) ]
+[ time 121 ] IO_DONE by JOB 1
+[ time 121 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 4 (of 100) ]
+[ time 122 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 3 (of 100) ]
+[ time 123 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 2 (of 100) ]
+[ time 124 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 1 (of 100) ]
+[ time 125 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 0 (of 100) ]
+[ time 126 ] FINISHED JOB 0
+[ time 126 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 173 (of 200) ]
+[ time 127 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 172 (of 200) ]
+[ time 128 ] IO_START by JOB 1
+IO DONE
+[ time 128 ] IDLE
+[ time 129 ] IDLE
+[ time 130 ] IDLE
+[ time 131 ] IDLE
+[ time 132 ] IDLE
+[ time 133 ] IO_DONE by JOB 1
+[ time 133 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 171 (of 200) ]
+[ time 134 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 170 (of 200) ]
+[ time 135 ] IO_START by JOB 1
+IO DONE
+[ time 135 ] IDLE
+[ time 136 ] IDLE
+[ time 137 ] IDLE
+[ time 138 ] IDLE
+[ time 139 ] IDLE
+[ time 140 ] IO_DONE by JOB 1
+[ time 140 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 169 (of 200) ]
+[ time 141 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 168 (of 200) ]
+[ time 142 ] IO_START by JOB 1
+IO DONE
+[ time 142 ] IDLE
+[ time 143 ] IDLE
+[ time 144 ] IDLE
+[ time 145 ] IDLE
+[ time 146 ] IDLE
+[ time 147 ] IO_DONE by JOB 1
+[ time 147 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 167 (of 200) ]
+[ time 148 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 166 (of 200) ]
+[ time 149 ] IO_START by JOB 1
+IO DONE
+[ time 149 ] IDLE
+[ time 150 ] IDLE
+[ time 151 ] IDLE
+[ time 152 ] IDLE
+[ time 153 ] IDLE
+[ time 154 ] IO_DONE by JOB 1
+[ time 154 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 165 (of 200) ]
+[ time 155 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 164 (of 200) ]
+[ time 156 ] IO_START by JOB 1
+IO DONE
+[ time 156 ] IDLE
+[ time 157 ] IDLE
+[ time 158 ] IDLE
+[ time 159 ] IDLE
+[ time 160 ] IDLE
+[ time 161 ] IO_DONE by JOB 1
+[ time 161 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 163 (of 200) ]
+[ time 162 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 162 (of 200) ]
+[ time 163 ] IO_START by JOB 1
+IO DONE
+[ time 163 ] IDLE
+[ time 164 ] IDLE
+[ time 165 ] IDLE
+[ time 166 ] IDLE
+[ time 167 ] IDLE
+[ time 168 ] IO_DONE by JOB 1
+[ time 168 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 161 (of 200) ]
+[ time 169 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 160 (of 200) ]
+[ time 170 ] IO_START by JOB 1
+IO DONE
+[ time 170 ] IDLE
+[ time 171 ] IDLE
+[ time 172 ] IDLE
+[ time 173 ] IDLE
+[ time 174 ] IDLE
+[ time 175 ] IO_DONE by JOB 1
+[ time 175 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 159 (of 200) ]
+[ time 176 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 158 (of 200) ]
+[ time 177 ] IO_START by JOB 1
+IO DONE
+[ time 177 ] IDLE
+[ time 178 ] IDLE
+[ time 179 ] IDLE
+[ time 180 ] IDLE
+[ time 181 ] IDLE
+[ time 182 ] IO_DONE by JOB 1
+[ time 182 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 157 (of 200) ]
+[ time 183 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 156 (of 200) ]
+[ time 184 ] IO_START by JOB 1
+IO DONE
+[ time 184 ] IDLE
+[ time 185 ] IDLE
+[ time 186 ] IDLE
+[ time 187 ] IDLE
+[ time 188 ] IDLE
+[ time 189 ] IO_DONE by JOB 1
+[ time 189 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 155 (of 200) ]
+[ time 190 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 154 (of 200) ]
+[ time 191 ] IO_START by JOB 1
+IO DONE
+[ time 191 ] IDLE
+[ time 192 ] IDLE
+[ time 193 ] IDLE
+[ time 194 ] IDLE
+[ time 195 ] IDLE
+[ time 196 ] IO_DONE by JOB 1
+[ time 196 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 153 (of 200) ]
+[ time 197 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 152 (of 200) ]
+[ time 198 ] IO_START by JOB 1
+IO DONE
+[ time 198 ] IDLE
+[ time 199 ] IDLE
+[ time 200 ] IDLE
+[ time 201 ] IDLE
+[ time 202 ] IDLE
+[ time 203 ] IO_DONE by JOB 1
+[ time 203 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 151 (of 200) ]
+[ time 204 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 150 (of 200) ]
+[ time 205 ] IO_START by JOB 1
+IO DONE
+[ time 205 ] IDLE
+[ time 206 ] IDLE
+[ time 207 ] IDLE
+[ time 208 ] IDLE
+[ time 209 ] IDLE
+[ time 210 ] IO_DONE by JOB 1
+[ time 210 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 149 (of 200) ]
+[ time 211 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 148 (of 200) ]
+[ time 212 ] IO_START by JOB 1
+IO DONE
+[ time 212 ] IDLE
+[ time 213 ] IDLE
+[ time 214 ] IDLE
+[ time 215 ] IDLE
+[ time 216 ] IDLE
+[ time 217 ] IO_DONE by JOB 1
+[ time 217 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 147 (of 200) ]
+[ time 218 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 146 (of 200) ]
+[ time 219 ] IO_START by JOB 1
+IO DONE
+[ time 219 ] IDLE
+[ time 220 ] IDLE
+[ time 221 ] IDLE
+[ time 222 ] IDLE
+[ time 223 ] IDLE
+[ time 224 ] IO_DONE by JOB 1
+[ time 224 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 145 (of 200) ]
+[ time 225 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 144 (of 200) ]
+[ time 226 ] IO_START by JOB 1
+IO DONE
+[ time 226 ] IDLE
+[ time 227 ] IDLE
+[ time 228 ] IDLE
+[ time 229 ] IDLE
+[ time 230 ] IDLE
+[ time 231 ] IO_DONE by JOB 1
+[ time 231 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 143 (of 200) ]
+[ time 232 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 142 (of 200) ]
+[ time 233 ] IO_START by JOB 1
+IO DONE
+[ time 233 ] IDLE
+[ time 234 ] IDLE
+[ time 235 ] IDLE
+[ time 236 ] IDLE
+[ time 237 ] IDLE
+[ time 238 ] IO_DONE by JOB 1
+[ time 238 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 141 (of 200) ]
+[ time 239 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 140 (of 200) ]
+[ time 240 ] IO_START by JOB 1
+IO DONE
+[ time 240 ] IDLE
+[ time 241 ] IDLE
+[ time 242 ] IDLE
+[ time 243 ] IDLE
+[ time 244 ] IDLE
+[ time 245 ] IO_DONE by JOB 1
+[ time 245 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 139 (of 200) ]
+[ time 246 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 138 (of 200) ]
+[ time 247 ] IO_START by JOB 1
+IO DONE
+[ time 247 ] IDLE
+[ time 248 ] IDLE
+[ time 249 ] IDLE
+[ time 250 ] IDLE
+[ time 251 ] IDLE
+[ time 252 ] IO_DONE by JOB 1
+[ time 252 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 137 (of 200) ]
+[ time 253 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 136 (of 200) ]
+[ time 254 ] IO_START by JOB 1
+IO DONE
+[ time 254 ] IDLE
+[ time 255 ] IDLE
+[ time 256 ] IDLE
+[ time 257 ] IDLE
+[ time 258 ] IDLE
+[ time 259 ] IO_DONE by JOB 1
+[ time 259 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 135 (of 200) ]
+[ time 260 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 134 (of 200) ]
+[ time 261 ] IO_START by JOB 1
+IO DONE
+[ time 261 ] IDLE
+[ time 262 ] IDLE
+[ time 263 ] IDLE
+[ time 264 ] IDLE
+[ time 265 ] IDLE
+[ time 266 ] IO_DONE by JOB 1
+[ time 266 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 133 (of 200) ]
+[ time 267 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 132 (of 200) ]
+[ time 268 ] IO_START by JOB 1
+IO DONE
+[ time 268 ] IDLE
+[ time 269 ] IDLE
+[ time 270 ] IDLE
+[ time 271 ] IDLE
+[ time 272 ] IDLE
+[ time 273 ] IO_DONE by JOB 1
+[ time 273 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 131 (of 200) ]
+[ time 274 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 130 (of 200) ]
+[ time 275 ] IO_START by JOB 1
+IO DONE
+[ time 275 ] IDLE
+[ time 276 ] IDLE
+[ time 277 ] IDLE
+[ time 278 ] IDLE
+[ time 279 ] IDLE
+[ time 280 ] IO_DONE by JOB 1
+[ time 280 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 129 (of 200) ]
+[ time 281 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 128 (of 200) ]
+[ time 282 ] IO_START by JOB 1
+IO DONE
+[ time 282 ] IDLE
+[ time 283 ] IDLE
+[ time 284 ] IDLE
+[ time 285 ] IDLE
+[ time 286 ] IDLE
+[ time 287 ] IO_DONE by JOB 1
+[ time 287 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 127 (of 200) ]
+[ time 288 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 126 (of 200) ]
+[ time 289 ] IO_START by JOB 1
+IO DONE
+[ time 289 ] IDLE
+[ time 290 ] IDLE
+[ time 291 ] IDLE
+[ time 292 ] IDLE
+[ time 293 ] IDLE
+[ time 294 ] IO_DONE by JOB 1
+[ time 294 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 125 (of 200) ]
+[ time 295 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 124 (of 200) ]
+[ time 296 ] IO_START by JOB 1
+IO DONE
+[ time 296 ] IDLE
+[ time 297 ] IDLE
+[ time 298 ] IDLE
+[ time 299 ] IDLE
+[ time 300 ] IDLE
+[ time 301 ] IO_DONE by JOB 1
+[ time 301 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 123 (of 200) ]
+[ time 302 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 122 (of 200) ]
+[ time 303 ] IO_START by JOB 1
+IO DONE
+[ time 303 ] IDLE
+[ time 304 ] IDLE
+[ time 305 ] IDLE
+[ time 306 ] IDLE
+[ time 307 ] IDLE
+[ time 308 ] IO_DONE by JOB 1
+[ time 308 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 121 (of 200) ]
+[ time 309 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 120 (of 200) ]
+[ time 310 ] IO_START by JOB 1
+IO DONE
+[ time 310 ] IDLE
+[ time 311 ] IDLE
+[ time 312 ] IDLE
+[ time 313 ] IDLE
+[ time 314 ] IDLE
+[ time 315 ] IO_DONE by JOB 1
+[ time 315 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 119 (of 200) ]
+[ time 316 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 118 (of 200) ]
+[ time 317 ] IO_START by JOB 1
+IO DONE
+[ time 317 ] IDLE
+[ time 318 ] IDLE
+[ time 319 ] IDLE
+[ time 320 ] IDLE
+[ time 321 ] IDLE
+[ time 322 ] IO_DONE by JOB 1
+[ time 322 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 117 (of 200) ]
+[ time 323 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 116 (of 200) ]
+[ time 324 ] IO_START by JOB 1
+IO DONE
+[ time 324 ] IDLE
+[ time 325 ] IDLE
+[ time 326 ] IDLE
+[ time 327 ] IDLE
+[ time 328 ] IDLE
+[ time 329 ] IO_DONE by JOB 1
+[ time 329 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 115 (of 200) ]
+[ time 330 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 114 (of 200) ]
+[ time 331 ] IO_START by JOB 1
+IO DONE
+[ time 331 ] IDLE
+[ time 332 ] IDLE
+[ time 333 ] IDLE
+[ time 334 ] IDLE
+[ time 335 ] IDLE
+[ time 336 ] IO_DONE by JOB 1
+[ time 336 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 113 (of 200) ]
+[ time 337 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 112 (of 200) ]
+[ time 338 ] IO_START by JOB 1
+IO DONE
+[ time 338 ] IDLE
+[ time 339 ] IDLE
+[ time 340 ] IDLE
+[ time 341 ] IDLE
+[ time 342 ] IDLE
+[ time 343 ] IO_DONE by JOB 1
+[ time 343 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 111 (of 200) ]
+[ time 344 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 110 (of 200) ]
+[ time 345 ] IO_START by JOB 1
+IO DONE
+[ time 345 ] IDLE
+[ time 346 ] IDLE
+[ time 347 ] IDLE
+[ time 348 ] IDLE
+[ time 349 ] IDLE
+[ time 350 ] IO_DONE by JOB 1
+[ time 350 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 109 (of 200) ]
+[ time 351 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 108 (of 200) ]
+[ time 352 ] IO_START by JOB 1
+IO DONE
+[ time 352 ] IDLE
+[ time 353 ] IDLE
+[ time 354 ] IDLE
+[ time 355 ] IDLE
+[ time 356 ] IDLE
+[ time 357 ] IO_DONE by JOB 1
+[ time 357 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 107 (of 200) ]
+[ time 358 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 106 (of 200) ]
+[ time 359 ] IO_START by JOB 1
+IO DONE
+[ time 359 ] IDLE
+[ time 360 ] IDLE
+[ time 361 ] IDLE
+[ time 362 ] IDLE
+[ time 363 ] IDLE
+[ time 364 ] IO_DONE by JOB 1
+[ time 364 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 105 (of 200) ]
+[ time 365 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 104 (of 200) ]
+[ time 366 ] IO_START by JOB 1
+IO DONE
+[ time 366 ] IDLE
+[ time 367 ] IDLE
+[ time 368 ] IDLE
+[ time 369 ] IDLE
+[ time 370 ] IDLE
+[ time 371 ] IO_DONE by JOB 1
+[ time 371 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 103 (of 200) ]
+[ time 372 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 102 (of 200) ]
+[ time 373 ] IO_START by JOB 1
+IO DONE
+[ time 373 ] IDLE
+[ time 374 ] IDLE
+[ time 375 ] IDLE
+[ time 376 ] IDLE
+[ time 377 ] IDLE
+[ time 378 ] IO_DONE by JOB 1
+[ time 378 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 101 (of 200) ]
+[ time 379 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 100 (of 200) ]
+[ time 380 ] IO_START by JOB 1
+IO DONE
+[ time 380 ] IDLE
+[ time 381 ] IDLE
+[ time 382 ] IDLE
+[ time 383 ] IDLE
+[ time 384 ] IDLE
+[ time 385 ] IO_DONE by JOB 1
+[ time 385 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 99 (of 200) ]
+[ time 386 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 98 (of 200) ]
+[ time 387 ] IO_START by JOB 1
+IO DONE
+[ time 387 ] IDLE
+[ time 388 ] IDLE
+[ time 389 ] IDLE
+[ time 390 ] IDLE
+[ time 391 ] IDLE
+[ time 392 ] IO_DONE by JOB 1
+[ time 392 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 97 (of 200) ]
+[ time 393 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 96 (of 200) ]
+[ time 394 ] IO_START by JOB 1
+IO DONE
+[ time 394 ] IDLE
+[ time 395 ] IDLE
+[ time 396 ] IDLE
+[ time 397 ] IDLE
+[ time 398 ] IDLE
+[ time 399 ] IO_DONE by JOB 1
+[ time 399 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 95 (of 200) ]
+[ time 400 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 94 (of 200) ]
+[ time 401 ] IO_START by JOB 1
+IO DONE
+[ time 401 ] IDLE
+[ time 402 ] IDLE
+[ time 403 ] IDLE
+[ time 404 ] IDLE
+[ time 405 ] IDLE
+[ time 406 ] IO_DONE by JOB 1
+[ time 406 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 93 (of 200) ]
+[ time 407 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 92 (of 200) ]
+[ time 408 ] IO_START by JOB 1
+IO DONE
+[ time 408 ] IDLE
+[ time 409 ] IDLE
+[ time 410 ] IDLE
+[ time 411 ] IDLE
+[ time 412 ] IDLE
+[ time 413 ] IO_DONE by JOB 1
+[ time 413 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 91 (of 200) ]
+[ time 414 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 90 (of 200) ]
+[ time 415 ] IO_START by JOB 1
+IO DONE
+[ time 415 ] IDLE
+[ time 416 ] IDLE
+[ time 417 ] IDLE
+[ time 418 ] IDLE
+[ time 419 ] IDLE
+[ time 420 ] IO_DONE by JOB 1
+[ time 420 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 89 (of 200) ]
+[ time 421 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 88 (of 200) ]
+[ time 422 ] IO_START by JOB 1
+IO DONE
+[ time 422 ] IDLE
+[ time 423 ] IDLE
+[ time 424 ] IDLE
+[ time 425 ] IDLE
+[ time 426 ] IDLE
+[ time 427 ] IO_DONE by JOB 1
+[ time 427 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 87 (of 200) ]
+[ time 428 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 86 (of 200) ]
+[ time 429 ] IO_START by JOB 1
+IO DONE
+[ time 429 ] IDLE
+[ time 430 ] IDLE
+[ time 431 ] IDLE
+[ time 432 ] IDLE
+[ time 433 ] IDLE
+[ time 434 ] IO_DONE by JOB 1
+[ time 434 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 85 (of 200) ]
+[ time 435 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 84 (of 200) ]
+[ time 436 ] IO_START by JOB 1
+IO DONE
+[ time 436 ] IDLE
+[ time 437 ] IDLE
+[ time 438 ] IDLE
+[ time 439 ] IDLE
+[ time 440 ] IDLE
+[ time 441 ] IO_DONE by JOB 1
+[ time 441 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 83 (of 200) ]
+[ time 442 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 82 (of 200) ]
+[ time 443 ] IO_START by JOB 1
+IO DONE
+[ time 443 ] IDLE
+[ time 444 ] IDLE
+[ time 445 ] IDLE
+[ time 446 ] IDLE
+[ time 447 ] IDLE
+[ time 448 ] IO_DONE by JOB 1
+[ time 448 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 81 (of 200) ]
+[ time 449 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 80 (of 200) ]
+[ time 450 ] IO_START by JOB 1
+IO DONE
+[ time 450 ] IDLE
+[ time 451 ] IDLE
+[ time 452 ] IDLE
+[ time 453 ] IDLE
+[ time 454 ] IDLE
+[ time 455 ] IO_DONE by JOB 1
+[ time 455 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 79 (of 200) ]
+[ time 456 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 78 (of 200) ]
+[ time 457 ] IO_START by JOB 1
+IO DONE
+[ time 457 ] IDLE
+[ time 458 ] IDLE
+[ time 459 ] IDLE
+[ time 460 ] IDLE
+[ time 461 ] IDLE
+[ time 462 ] IO_DONE by JOB 1
+[ time 462 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 77 (of 200) ]
+[ time 463 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 76 (of 200) ]
+[ time 464 ] IO_START by JOB 1
+IO DONE
+[ time 464 ] IDLE
+[ time 465 ] IDLE
+[ time 466 ] IDLE
+[ time 467 ] IDLE
+[ time 468 ] IDLE
+[ time 469 ] IO_DONE by JOB 1
+[ time 469 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 75 (of 200) ]
+[ time 470 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 74 (of 200) ]
+[ time 471 ] IO_START by JOB 1
+IO DONE
+[ time 471 ] IDLE
+[ time 472 ] IDLE
+[ time 473 ] IDLE
+[ time 474 ] IDLE
+[ time 475 ] IDLE
+[ time 476 ] IO_DONE by JOB 1
+[ time 476 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 73 (of 200) ]
+[ time 477 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 72 (of 200) ]
+[ time 478 ] IO_START by JOB 1
+IO DONE
+[ time 478 ] IDLE
+[ time 479 ] IDLE
+[ time 480 ] IDLE
+[ time 481 ] IDLE
+[ time 482 ] IDLE
+[ time 483 ] IO_DONE by JOB 1
+[ time 483 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 71 (of 200) ]
+[ time 484 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 70 (of 200) ]
+[ time 485 ] IO_START by JOB 1
+IO DONE
+[ time 485 ] IDLE
+[ time 486 ] IDLE
+[ time 487 ] IDLE
+[ time 488 ] IDLE
+[ time 489 ] IDLE
+[ time 490 ] IO_DONE by JOB 1
+[ time 490 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 69 (of 200) ]
+[ time 491 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 68 (of 200) ]
+[ time 492 ] IO_START by JOB 1
+IO DONE
+[ time 492 ] IDLE
+[ time 493 ] IDLE
+[ time 494 ] IDLE
+[ time 495 ] IDLE
+[ time 496 ] IDLE
+[ time 497 ] IO_DONE by JOB 1
+[ time 497 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 67 (of 200) ]
+[ time 498 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 66 (of 200) ]
+[ time 499 ] IO_START by JOB 1
+IO DONE
+[ time 499 ] IDLE
+[ time 500 ] IDLE
+[ time 501 ] IDLE
+[ time 502 ] IDLE
+[ time 503 ] IDLE
+[ time 504 ] IO_DONE by JOB 1
+[ time 504 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 65 (of 200) ]
+[ time 505 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 64 (of 200) ]
+[ time 506 ] IO_START by JOB 1
+IO DONE
+[ time 506 ] IDLE
+[ time 507 ] IDLE
+[ time 508 ] IDLE
+[ time 509 ] IDLE
+[ time 510 ] IDLE
+[ time 511 ] IO_DONE by JOB 1
+[ time 511 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 63 (of 200) ]
+[ time 512 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 62 (of 200) ]
+[ time 513 ] IO_START by JOB 1
+IO DONE
+[ time 513 ] IDLE
+[ time 514 ] IDLE
+[ time 515 ] IDLE
+[ time 516 ] IDLE
+[ time 517 ] IDLE
+[ time 518 ] IO_DONE by JOB 1
+[ time 518 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 61 (of 200) ]
+[ time 519 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 60 (of 200) ]
+[ time 520 ] IO_START by JOB 1
+IO DONE
+[ time 520 ] IDLE
+[ time 521 ] IDLE
+[ time 522 ] IDLE
+[ time 523 ] IDLE
+[ time 524 ] IDLE
+[ time 525 ] IO_DONE by JOB 1
+[ time 525 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 59 (of 200) ]
+[ time 526 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 58 (of 200) ]
+[ time 527 ] IO_START by JOB 1
+IO DONE
+[ time 527 ] IDLE
+[ time 528 ] IDLE
+[ time 529 ] IDLE
+[ time 530 ] IDLE
+[ time 531 ] IDLE
+[ time 532 ] IO_DONE by JOB 1
+[ time 532 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 57 (of 200) ]
+[ time 533 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 56 (of 200) ]
+[ time 534 ] IO_START by JOB 1
+IO DONE
+[ time 534 ] IDLE
+[ time 535 ] IDLE
+[ time 536 ] IDLE
+[ time 537 ] IDLE
+[ time 538 ] IDLE
+[ time 539 ] IO_DONE by JOB 1
+[ time 539 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 55 (of 200) ]
+[ time 540 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 54 (of 200) ]
+[ time 541 ] IO_START by JOB 1
+IO DONE
+[ time 541 ] IDLE
+[ time 542 ] IDLE
+[ time 543 ] IDLE
+[ time 544 ] IDLE
+[ time 545 ] IDLE
+[ time 546 ] IO_DONE by JOB 1
+[ time 546 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 53 (of 200) ]
+[ time 547 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 52 (of 200) ]
+[ time 548 ] IO_START by JOB 1
+IO DONE
+[ time 548 ] IDLE
+[ time 549 ] IDLE
+[ time 550 ] IDLE
+[ time 551 ] IDLE
+[ time 552 ] IDLE
+[ time 553 ] IO_DONE by JOB 1
+[ time 553 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 51 (of 200) ]
+[ time 554 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 50 (of 200) ]
+[ time 555 ] IO_START by JOB 1
+IO DONE
+[ time 555 ] IDLE
+[ time 556 ] IDLE
+[ time 557 ] IDLE
+[ time 558 ] IDLE
+[ time 559 ] IDLE
+[ time 560 ] IO_DONE by JOB 1
+[ time 560 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 49 (of 200) ]
+[ time 561 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 48 (of 200) ]
+[ time 562 ] IO_START by JOB 1
+IO DONE
+[ time 562 ] IDLE
+[ time 563 ] IDLE
+[ time 564 ] IDLE
+[ time 565 ] IDLE
+[ time 566 ] IDLE
+[ time 567 ] IO_DONE by JOB 1
+[ time 567 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 47 (of 200) ]
+[ time 568 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 46 (of 200) ]
+[ time 569 ] IO_START by JOB 1
+IO DONE
+[ time 569 ] IDLE
+[ time 570 ] IDLE
+[ time 571 ] IDLE
+[ time 572 ] IDLE
+[ time 573 ] IDLE
+[ time 574 ] IO_DONE by JOB 1
+[ time 574 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 45 (of 200) ]
+[ time 575 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 44 (of 200) ]
+[ time 576 ] IO_START by JOB 1
+IO DONE
+[ time 576 ] IDLE
+[ time 577 ] IDLE
+[ time 578 ] IDLE
+[ time 579 ] IDLE
+[ time 580 ] IDLE
+[ time 581 ] IO_DONE by JOB 1
+[ time 581 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 43 (of 200) ]
+[ time 582 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 42 (of 200) ]
+[ time 583 ] IO_START by JOB 1
+IO DONE
+[ time 583 ] IDLE
+[ time 584 ] IDLE
+[ time 585 ] IDLE
+[ time 586 ] IDLE
+[ time 587 ] IDLE
+[ time 588 ] IO_DONE by JOB 1
+[ time 588 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 41 (of 200) ]
+[ time 589 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 40 (of 200) ]
+[ time 590 ] IO_START by JOB 1
+IO DONE
+[ time 590 ] IDLE
+[ time 591 ] IDLE
+[ time 592 ] IDLE
+[ time 593 ] IDLE
+[ time 594 ] IDLE
+[ time 595 ] IO_DONE by JOB 1
+[ time 595 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 39 (of 200) ]
+[ time 596 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 38 (of 200) ]
+[ time 597 ] IO_START by JOB 1
+IO DONE
+[ time 597 ] IDLE
+[ time 598 ] IDLE
+[ time 599 ] IDLE
+[ time 600 ] IDLE
+[ time 601 ] IDLE
+[ time 602 ] IO_DONE by JOB 1
+[ time 602 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 37 (of 200) ]
+[ time 603 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 36 (of 200) ]
+[ time 604 ] IO_START by JOB 1
+IO DONE
+[ time 604 ] IDLE
+[ time 605 ] IDLE
+[ time 606 ] IDLE
+[ time 607 ] IDLE
+[ time 608 ] IDLE
+[ time 609 ] IO_DONE by JOB 1
+[ time 609 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 35 (of 200) ]
+[ time 610 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 34 (of 200) ]
+[ time 611 ] IO_START by JOB 1
+IO DONE
+[ time 611 ] IDLE
+[ time 612 ] IDLE
+[ time 613 ] IDLE
+[ time 614 ] IDLE
+[ time 615 ] IDLE
+[ time 616 ] IO_DONE by JOB 1
+[ time 616 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 33 (of 200) ]
+[ time 617 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 32 (of 200) ]
+[ time 618 ] IO_START by JOB 1
+IO DONE
+[ time 618 ] IDLE
+[ time 619 ] IDLE
+[ time 620 ] IDLE
+[ time 621 ] IDLE
+[ time 622 ] IDLE
+[ time 623 ] IO_DONE by JOB 1
+[ time 623 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 31 (of 200) ]
+[ time 624 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 30 (of 200) ]
+[ time 625 ] IO_START by JOB 1
+IO DONE
+[ time 625 ] IDLE
+[ time 626 ] IDLE
+[ time 627 ] IDLE
+[ time 628 ] IDLE
+[ time 629 ] IDLE
+[ time 630 ] IO_DONE by JOB 1
+[ time 630 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 29 (of 200) ]
+[ time 631 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 28 (of 200) ]
+[ time 632 ] IO_START by JOB 1
+IO DONE
+[ time 632 ] IDLE
+[ time 633 ] IDLE
+[ time 634 ] IDLE
+[ time 635 ] IDLE
+[ time 636 ] IDLE
+[ time 637 ] IO_DONE by JOB 1
+[ time 637 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 27 (of 200) ]
+[ time 638 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 26 (of 200) ]
+[ time 639 ] IO_START by JOB 1
+IO DONE
+[ time 639 ] IDLE
+[ time 640 ] IDLE
+[ time 641 ] IDLE
+[ time 642 ] IDLE
+[ time 643 ] IDLE
+[ time 644 ] IO_DONE by JOB 1
+[ time 644 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 25 (of 200) ]
+[ time 645 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 24 (of 200) ]
+[ time 646 ] IO_START by JOB 1
+IO DONE
+[ time 646 ] IDLE
+[ time 647 ] IDLE
+[ time 648 ] IDLE
+[ time 649 ] IDLE
+[ time 650 ] IDLE
+[ time 651 ] IO_DONE by JOB 1
+[ time 651 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 23 (of 200) ]
+[ time 652 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 22 (of 200) ]
+[ time 653 ] IO_START by JOB 1
+IO DONE
+[ time 653 ] IDLE
+[ time 654 ] IDLE
+[ time 655 ] IDLE
+[ time 656 ] IDLE
+[ time 657 ] IDLE
+[ time 658 ] IO_DONE by JOB 1
+[ time 658 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 21 (of 200) ]
+[ time 659 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 20 (of 200) ]
+[ time 660 ] IO_START by JOB 1
+IO DONE
+[ time 660 ] IDLE
+[ time 661 ] IDLE
+[ time 662 ] IDLE
+[ time 663 ] IDLE
+[ time 664 ] IDLE
+[ time 665 ] IO_DONE by JOB 1
+[ time 665 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 19 (of 200) ]
+[ time 666 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 18 (of 200) ]
+[ time 667 ] IO_START by JOB 1
+IO DONE
+[ time 667 ] IDLE
+[ time 668 ] IDLE
+[ time 669 ] IDLE
+[ time 670 ] IDLE
+[ time 671 ] IDLE
+[ time 672 ] IO_DONE by JOB 1
+[ time 672 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 17 (of 200) ]
+[ time 673 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 16 (of 200) ]
+[ time 674 ] IO_START by JOB 1
+IO DONE
+[ time 674 ] IDLE
+[ time 675 ] IDLE
+[ time 676 ] IDLE
+[ time 677 ] IDLE
+[ time 678 ] IDLE
+[ time 679 ] IO_DONE by JOB 1
+[ time 679 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 15 (of 200) ]
+[ time 680 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 14 (of 200) ]
+[ time 681 ] IO_START by JOB 1
+IO DONE
+[ time 681 ] IDLE
+[ time 682 ] IDLE
+[ time 683 ] IDLE
+[ time 684 ] IDLE
+[ time 685 ] IDLE
+[ time 686 ] IO_DONE by JOB 1
+[ time 686 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 13 (of 200) ]
+[ time 687 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 12 (of 200) ]
+[ time 688 ] IO_START by JOB 1
+IO DONE
+[ time 688 ] IDLE
+[ time 689 ] IDLE
+[ time 690 ] IDLE
+[ time 691 ] IDLE
+[ time 692 ] IDLE
+[ time 693 ] IO_DONE by JOB 1
+[ time 693 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 11 (of 200) ]
+[ time 694 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 10 (of 200) ]
+[ time 695 ] IO_START by JOB 1
+IO DONE
+[ time 695 ] IDLE
+[ time 696 ] IDLE
+[ time 697 ] IDLE
+[ time 698 ] IDLE
+[ time 699 ] IDLE
+[ time 700 ] IO_DONE by JOB 1
+[ time 700 ] Run JOB 1 at PRIORITY 0 [ TICKS 9 ALLOT 1 TIME 9 (of 200) ]
+[ time 701 ] Run JOB 1 at PRIORITY 0 [ TICKS 8 ALLOT 1 TIME 8 (of 200) ]
+[ time 702 ] IO_START by JOB 1
+IO DONE
+[ time 702 ] IDLE
+[ time 703 ] IDLE
+[ time 704 ] IDLE
+[ time 705 ] IDLE
+[ time 706 ] IDLE
+[ time 707 ] IO_DONE by JOB 1
+[ time 707 ] Run JOB 1 at PRIORITY 0 [ TICKS 7 ALLOT 1 TIME 7 (of 200) ]
+[ time 708 ] Run JOB 1 at PRIORITY 0 [ TICKS 6 ALLOT 1 TIME 6 (of 200) ]
+[ time 709 ] IO_START by JOB 1
+IO DONE
+[ time 709 ] IDLE
+[ time 710 ] IDLE
+[ time 711 ] IDLE
+[ time 712 ] IDLE
+[ time 713 ] IDLE
+[ time 714 ] IO_DONE by JOB 1
+[ time 714 ] Run JOB 1 at PRIORITY 0 [ TICKS 5 ALLOT 1 TIME 5 (of 200) ]
+[ time 715 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 4 (of 200) ]
+[ time 716 ] IO_START by JOB 1
+IO DONE
+[ time 716 ] IDLE
+[ time 717 ] IDLE
+[ time 718 ] IDLE
+[ time 719 ] IDLE
+[ time 720 ] IDLE
+[ time 721 ] IO_DONE by JOB 1
+[ time 721 ] Run JOB 1 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 3 (of 200) ]
+[ time 722 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 2 (of 200) ]
+[ time 723 ] IO_START by JOB 1
+IO DONE
+[ time 723 ] IDLE
+[ time 724 ] IDLE
+[ time 725 ] IDLE
+[ time 726 ] IDLE
+[ time 727 ] IDLE
+[ time 728 ] IO_DONE by JOB 1
+[ time 728 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 1 (of 200) ]
+[ time 729 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 0 (of 200) ]
+[ time 730 ] FINISHED JOB 1
+
+Final statistics:
+Job  0: startTime   0 - response   0 - turnaround 126
+Job  1: startTime   0 - response  10 - turnaround 730
+
+  Avg  1: startTime n/a - response 5.00 - turnaround 428.00
+
+
+[126, 730]
+[100, 200]
+309136
+563152
+Fairness 0.5489388300139216

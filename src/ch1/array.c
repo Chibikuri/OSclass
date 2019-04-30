@@ -11,11 +11,11 @@ int main(void){
 
 	//表示
 	for(i=0; i<5; i++){
-		printf("%d\n", array[i]);
+		print(f("%d\n", array[i]);
 	}
 	//各要素の*アドレス*を表示
 	for(i=0; i < 5; i++){
-		printf("&array[%d]..%p\n", i, &array[i]);
+		print(f("&array[%d]..%p\n", i, &array[i]);
 	}
 
 	return 0;

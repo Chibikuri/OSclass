@@ -14,6 +14,6 @@ int main(void){
 
 	//その内容（ポインタを表示）
 	for(p=&array[0]; p!=&array[5]; p++){
-		printf("%d\n", *p);
+		print(f("%d\n", *p);
 	}
 }

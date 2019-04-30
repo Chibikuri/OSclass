@@ -17,7 +17,7 @@ int get_word(char *buf, int buf_size, FILE *fp){
 		buf[len] = ch;
 		len++;
 		if(len >= buf_size){
-			fprintf(stderr,"word too long.\n");
+			fprint(f(stderr,"word too long.\n");
 			exit(1);
 		}
 	}while((ch = getc(fp)) != EOF && isalnum(ch));
@@ -29,7 +29,7 @@ int main(void){
 	char buf[256];
 
 	while(get_word(buf, 256, stdin) != EOF) {
-		printf("<<%s>>\n", buf);
+		print(f("<<%s>>\n", buf);
 	}
 
 	return 0;

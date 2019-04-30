@@ -13,33 +13,33 @@ void func1(void){
 	//def static int type of func1_static_variable
 	static int func1_static_variable;
 
-	printf("&func1_variable..%p\n", &func1_variable);
-	printf("&func1_static_variable..%p\n", &func1_static_variable);
+	print(f("&func1_variable..%p\n", &func1_variable);
+	print(f("&func1_static_variable..%p\n", &func1_static_variable);
 
 }
 
 void func2(void){
 	int func2_variable;
 	
-	printf("&func2_variable..%p\n", &func2_variable);
+	print(f("&func2_variable..%p\n", &func2_variable);
 }
 
 int main (void){
 	int *p;
-	printf("&func1..%p\n", func1);
-	printf("&func2..%p\n", func2);
+	print(f("&func1..%p\n", func1);
+	print(f("&func2..%p\n", func2);
 
-	printf("String literal..%p\n", "abc");
+	print(f("String literal..%p\n", "abc");
 
-	printf("&global_variable..%p\n", &global_variable);
+	print(f("&global_variable..%p\n", &global_variable);
 
-	printf("&file_static_variable..%p\n", &file_static_variable);
+	print(f("&file_static_variable..%p\n", &file_static_variable);
 
 	func1();
 	func2();
 
 	p = malloc(sizeof(int));
-	printf("malloc address...%p\n", p);
+	print(f("malloc address...%p\n", p);
 	
 	return 0;
 }

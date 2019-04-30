@@ -12,5 +12,5 @@ int main(void){
 	int a = 3;
 	int b = 5;
 	swap(&a, &b);
-	printf("x..%d, y..%d\n", a, b);
+	print(f("x..%d, y..%d\n", a, b);
 }

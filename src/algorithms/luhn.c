@@ -12,9 +12,9 @@ int main(void){
         w = 3 - w;
     }
     if (t%10 == 0){ 
-        printf("ok\n"); 
+        print(f("ok\n"); 
     } else {
-        printf("no\n");
+        print(f("no\n");
     };
     return 0;
 }
