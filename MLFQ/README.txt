@@ -3,6 +3,7 @@
 seed:100
 File  src → mlfq.py
       result → first.txt
+
  - What I found
 When I run this program with two jobs and two queues, using I/O is slower than not using I/O.
 time:
@@ -18,17 +19,22 @@ Files src → mlfq2.py
       fig8.4 → second8-4.txt
       fig8.5left → second8-5left.txt
       fig8.5right　→ second8-5right.txt
+      fig8.7　→ second8-7.txt
 
 command: fig8.2 → python mlfq2.py -l 0,200,0 -n 3 -c > second8-2.txt
          fig8.3 → python mlfq2.py -l 0,200,0:100,20,0 -n 3 -c > second8-3.txt
          fig8.4 → python mlfq2.py -l 0,150,0:50,10,1:110,10,1 -c > second8-4.txt
          fig8.5left → python mlfq2.py -l 0,100,0:100,10,1:100,10,1 -c > second8-5left.txt
          fig8.5right → python mlfq2.py -l 0,100,0:100,10,1:100,10,1 -B 50 -c > second8-5right.txt
+         fig8.7 → python mlfq2.py -l 0,100,0:0,100,0 -Q 10,20,40 -c > second8-7.txt
 
  - What I found and implemented.
 
 I implemented function to describe gantt chart of each job.
 I had no idea how to implement I/O as a separated job. So, I regarded I/O as a short job and kept it high priority.
+The number of I/O should be not only too less but also too much.
+If there are boost, in terms of main job(first job), it is not good idea(take much time), but in terms of all jobs,
+efficiency could be better.
 
 ## Third
 Description of how I would calculate fairness.
@@ -63,4 +69,11 @@ result: fairness　→　0.5920633314785776(~0.6)
 Extra experiment2
 Job : job1 start:0, lenth:100, noIO  job2 start:0 lenth:200, IO with 2freq
 result: fairness　→ 0.5489388300139216(~0.5)
+
+- what I found
+I found it's better to take response time into consideration because it should not depend on time quantum but my model may depend on time quantum.
+So, I think following description is better.
+
+     Fairness = ((Σ(Xact - Xpre - response))^2)/(n*Σ((Xact - Xpre - response)^2))
+     n ... number of jobs
 
