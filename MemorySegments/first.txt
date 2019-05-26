@@ -1,0 +1,4 @@
+char    0x7ffee45377cf
+int     0x7ffee45377c8
+float   0x7ffee45377c4
+double  0x7ffee45377b8

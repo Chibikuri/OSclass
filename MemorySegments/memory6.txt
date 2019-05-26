@@ -1,0 +1,5 @@
+In my macOS, the range of process space map is 
+from 0x0000_0000 to 0xffff_ffff
+But, I couldn't find exact range of segments of local variables, grobal variables, functions and malloced memory.
+From result of first and third experiment, I think I can distinguish local variable and grobal variable.
+I think it's difficult to distinguish segments of local variable, functions and malloced memory.

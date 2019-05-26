@@ -1,0 +1,4 @@
+char    0x10f751018
+int     0x10f75102c
+float   0x10f751028
+double  0x10f751020
